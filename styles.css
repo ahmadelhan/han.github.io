@@ -1,0 +1,533 @@
+:root {
+  --primary-color: #111;
+  --secondary-color: #f2f2f2;
+}
+
+.light-theme {
+  --primary-color: #d5d5d5;
+  --secondary-color: #222;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* Header-home section Start */
+.hero-header {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Light / Dark Toggle Start */
+.switch-container {
+  position: fixed;
+  right: 4%;
+  top: 5%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid #414141;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.switch input:checked + .slider {
+  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  border: 2px solid #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+/* Light / Dark Toggle End */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header-content .profile {
+  height: 550px;
+  width: 650px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 7px 5px 28px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header-content .text-content {
+  padding: 2rem 3.5rem;
+  margin: 1.2rem;
+  color: var(--secondary-color);
+  width: 80%;
+}
+
+.header-content .text-content h1 {
+  font-size: 3.5rem;
+  color: #ffb400;
+  position: relative;
+  line-height: 3.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-content .text-content h1::before {
+  content: "";
+  color: #ffb400;
+  top: 25%;
+  left: -6%;
+  height: 5px;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.header-content .text-content h1 span {
+  color: var(--secondary-color);
+}
+
+.navbar .nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  padding: 0.8rem;
+  position: fixed;
+  right: 2%;
+  top: 9%;
+}
+
+.navbar .nav a {
+  position: relative;
+  font-size: 18px;
+  display: block;
+  margin: 10px;
+  transition: 0.5s;
+  color: var(--secondary-color);
+}
+
+.navbar .nav a i {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  background-color: #2b2a2a;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.navbar .nav .active {
+  color: var(--secondary-color);
+  background-color: #ffb400;
+}
+
+.navbar .nav a:hover i {
+  background-color: #ffb400;
+  color: var(--secondary-color);
+}
+
+/* Button Styling Start */
+/* From Uiverse.io by Peary74 */
+.button-cv {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  fill: rgb(155, 153, 153);
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 35px;
+  font-weight: 500;
+}
+
+.button-cv span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-cv svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-cv:hover {
+  background: #ffb400;
+}
+
+.button-cv:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: 0.5s linear;
+}
+
+.button-cv:hover svg {
+  transform: translateX(3em) scale(1.1);
+  fill: #fff;
+}
+
+.button-cv:hover span {
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.button-cv:active {
+  transform: scale(0.95);
+  transition: 0.5s;
+}
+/* Button Styling End */
+/* Header-home section End */
+
+/* Proficiencies Section Start */
+
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.proficiencies-section {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.proficiencies-section h2 {
+  margin-bottom: 3rem;
+  color: #ffb400;
+}
+
+.proficiencies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.proficiency-box {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  height: 550px;
+  color: var(--primary-color);
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.proficiency-box:hover {
+  background-color: #ffb400;
+  color: var(--secondary-color);
+  border: 5px solid var(--secondary-color);
+  transform: scale(1.03);
+}
+
+.proficiency-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+.proficiency-info i {
+  font-size: 8rem;
+}
+
+.proficiency-info h4 {
+  font-weight: 4rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.proficiency-info p {
+  line-height: 1.7;
+}
+/* Proficiencies Section Start */
+
+/* Contact Section START */
+.contact-section {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.contact-section h2 {
+  margin-bottom: 3rem;
+  color: #ffb400;
+}
+
+.contact-section form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.contact-section form .input-box input,
+.contact-section form textarea {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  border: 2px solid #ffb400;
+  margin: 1.5rem;
+  resize: none;
+}
+.contact-section form textarea {
+  height: 500px;
+}
+/* From Uiverse.io by alexroumi */
+.btn {
+  font-family: "Poppins", sans-serif;
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: var(--secondary-color);
+  z-index: 1;
+  background: var(--primary-color);
+  position: relative;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  border: 2px solid #ffb400;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.btn:hover {
+  color: #ffb400;
+  font-weight: 1000;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+/* Contact Section END */
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 50px 0;
+}
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px solid #ffb400;
+  color: var(--secondary-color);
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease;
+  border-radius: 4rem;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+  background-color: #ffb400;
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 0 0 25px #ffb400;
+}
+
+.footer .social-icons {
+  text-align: center;
+}
+
+.footer ul {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li {
+  display: inline-block;
+}
+
+.footer ul li a {
+  color: var(--secondary-color);
+  border-bottom: 3px solid transparent;
+  transform: 0.3s ease-in-out;
+  margin-left: 30px;
+}
+
+.footer ul li a:hover {
+  border-bottom: 3px solid #ffb400;
+}
+
+/* Responsiveness Header-home section START */
+/* Breakpoint 1 */
+@media (max-width: 1200px) {
+  .header-content {
+    flex-direction: column;
+  }
+  .header-content .profile {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin-top: 2rem;
+  }
+  .header-content .profile img {
+    width: 100%;
+    height: 100%;
+  }
+  .text-content {
+    width: 100%;
+    text-align: center;
+  }
+  .text-content h1::before {
+    display: none;
+  }
+  .navbar {
+    background-color: #2b2a2a;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .navbar .nav {
+    width: 60%;
+    flex-direction: column;
+    padding: 0.3rem;
+    margin: auto;
+    right: -49%;
+    top: 9%;
+  }
+  .header-content .text-content .button-cv {
+    margin: auto;
+  }
+  .contact-section form {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1070px) {
+  .proficiencies-section h2 {
+    font-size: 5rem;
+  }
+  .contact-section h2{
+    font-size: 5rem;
+  }
+}
+
+/* Breakpoint 2 */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+  .header-content .profile {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin-top: 2rem;
+  }
+  .header-content .profile img {
+    width: 100%;
+    height: 100%;
+  }
+  .text-content {
+    width: 100%;
+    text-align: center;
+  }
+  .text-content h1::before {
+    display: none;
+  }
+  .header-content .text-content .button-cv {
+    margin: auto;
+  }
+  .header-content .text-content h1 {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  .proficiencies-section h2{
+    font-size: 3rem;
+  }
+
+  .contact-section h2{
+    font-size: 3rem;
+  }
+}
+/* Responsiveness Header-home section END */
